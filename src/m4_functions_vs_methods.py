@@ -259,7 +259,6 @@ def try_methods_and_functions():
     dean.draw_circle(30)
     dean.draw_square(50)
 
-
     ####################################################################
     # DONE: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
