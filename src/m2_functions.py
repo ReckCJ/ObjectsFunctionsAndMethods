@@ -38,6 +38,7 @@ def main():
     turtle3()
     turtle2()
     turtle2()
+    turtle5()
 
     window.close_on_mouse_click()
 
@@ -117,6 +118,27 @@ def turtle4():
         brad.right(90)
         brad.forward(50)
         brad.pen_down()
+
+
+def turtle5():
+    sam = rg.SimpleTurtle('triangle')
+    sam.pen = rg.Pen('red',5)
+    dean = rg.SimpleTurtle('square')
+    dean.pen = rg.Pen('black',5)
+    startingpoint = rg.Point(dean.x_cor(),dean.y_cor())
+    dean.left(45)
+    sam.right(45)
+    dean.pen_up()
+    sam.pen_up()
+    dean.forward(250)
+    sam.forward(250)
+    dean.pen_down()
+    sam.pen_down()
+    dean.draw_regular_polygon(5,20)
+    sam.draw_regular_polygon(10,10)
+    dean.go_to(startingpoint)
+    sam.go_to(startingpoint)
+
 ########################################################################
 #
 # DONE: 2.
@@ -197,7 +219,7 @@ def turtle4():
 
 ########################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   The previous two TODOs IMPLEMENTED a function (TO DO 3)
 #   and TESTED that function (TO DO 4).
 #
