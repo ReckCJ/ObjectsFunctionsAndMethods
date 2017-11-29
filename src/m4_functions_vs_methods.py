@@ -249,10 +249,10 @@ def try_methods_and_functions():
     dean.speed = 1
     draw_many_squares(dean, 2, 100, 30)
     dean.speed = 5
-    dean.pen = rg.Pen('red', 5)
+    dean.pen.color = 'red'
     draw_many_squares(dean, 10, 50, 15)
     dean.speed = 100
-    dean.pen = rg.Pen('red', 35)
+    dean.pen.thickness = 35
     draw_many_squares(dean, 8, 300, 60)
     dean.pen = rg.Pen('black', 3)
     dean.backward(200)
