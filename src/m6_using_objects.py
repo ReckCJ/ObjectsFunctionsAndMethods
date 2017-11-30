@@ -16,6 +16,7 @@ def main():
     # Test your functions by putting calls to them here:
     two_circles()
     circle_and_rectangle()
+    lines()
 
 def two_circles():
     """
@@ -80,22 +81,29 @@ def circle_and_rectangle():
     window = rg.RoseWindow()
     CenterX = 50
     CenterY = 50
-    circle = rg.Circle(CenterX, CenterY)
-    circle.fill_color('blue')
-    rectangle = rg.Rectangle((100, 100), (200, 200))
+    centerpoint = rg.Point(CenterX,CenterY)
+    circle = rg.Circle(centerpoint, 25)
+    circle.fill_color= 'blue'
+    corner1point = rg.Point(100, 100)
+    corner2point = rg.Point(200, 200)
+    rectangle = rg.Rectangle(corner1point, corner2point)
     print(circle.outline_thickness)
     print(circle.fill_color)
-    print(circle.center())
+    print(circle.center)
     print(CenterX)
     print(CenterY)
     print(rectangle.outline_thickness)
     print(rectangle.fill_color)
     rectanglecenter = rectangle.get_center()
     print(rectanglecenter)
+    print(rectanglecenter.x)
+    print(rectanglecenter.y)
+    circle.attach_to(window)
+    rectangle.attach_to(window)
     window.render()
     window.close_on_mouse_click()
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -127,8 +135,25 @@ def lines():
 
     -- Waits for the user to press the mouse, then closes the window.
     """
+    window = rg.RoseWindow()
+    start1 = rg.Point(50, 50)
+    end1 = rg.Point(50, 100)
+    start2 = rg.Point(100, 50)
+    end2 = rg.Point(100, 100)
+    line1 = rg.Line(start1, end1)
+    line2 = rg.Line(start2, end2)
+    line2.thickness = 5
+    line2midpoint = line2.get_midpoint()
+    print(line2midpoint)
+    print(line2midpoint.x)
+    print(line2midpoint.y)
+    line1.attach_to(window)
+    line2.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
+
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     # ------------------------------------------------------------------
 
 
